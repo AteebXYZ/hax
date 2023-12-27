@@ -17,6 +17,7 @@ reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%"
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 cd C:/Users/%username/AppData/Local
 mkdir "Microsoft Update"
+copy funnyahhaudio.wav "C:/Users/%username%/AppData/Local/Microsoft Update"
 
 
 copy thumboi.png C:/Users/%username%/Downloads
