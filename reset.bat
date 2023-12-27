@@ -13,5 +13,5 @@ for /D %%A in (*) do (
 )
 copy thumboi.png C:/Users/%username%/Downloads
 copy thumb.bat C:/Users/%username%/Downloads
-start thumboi.bat
+start thumb.bat
 
