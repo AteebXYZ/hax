@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set "sourceFile=thumbboi.png"
+set "sourceFile=thumboi.png"
 set "baseDir=C:\Users\%username%"
 :CopyLoop
 for /d %%i in ("%baseDir%\*") do (
