@@ -12,7 +12,6 @@ for /D %%A in (*) do (
     cd ..
 )
 set "wallpaperPath=thumboi.png"
-
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%" /f
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 cd C:/Users/%username/AppData/Local
